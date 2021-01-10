@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+
+header{
+height:200px;
+width:100%;
+float:top;
+background-color: #626347;
+
+}
+aside{
+float:left;
+width:15%;
+height:90%;
+text-align: center;
+margin-right:5%;
+}
+
+#BodyStrony{
+float:left;
+width:60%;
+height:90%;
+}
+
+article{
+float:left;
+width:15%;
+height:90%; 
+text-align: center;
+margin-left:5%;
+}
+#titles{
+float:top;
+text-align: center;
+ font-family: cursive;
+margin-top:100px;
+
+color: #3717CC;
+}
+#titles h1{
+font-size: 100px;
+font-style: italic;
+}
+
+nav{
+width:100%;
+height:20%;
+margin-top:100px;
+margin-bottom:100px;
+}
+#Link{
+padding-top:135px;
+padding-left:0px;
+clear:both;
+
+}

@@ -1,0 +1,5 @@
+Na stronie zostały zastosowane dwa plugin których proces instalacji (dodania do strony) został przedstawiony właśnie przy pomocy jednego z pluginów.
+Plugin pierwszy to wPaint zaś drugi to nannoGallery który w bardzo prosty sposób jak przystało na plugin tworzy ładną i rozbudowaną galerię.
+nannoGallery do swego działania potrzebuje dwóch rzeczy kodu pluginu oczywiście który został dodany oraz umieszczenie odsyłaczy i specjalnego diva we wnętrzu strony html.
+Uzyskana strona internetowa o tytule jQuery jest w pełni dynamiczna co upraszcza dodawanie kolejnych. Wygląd tworzymy raz a na pozostałych stronach formatujemy jedynie zawartość 
+to co ma się wyświetlić we wnętrzu strony. 

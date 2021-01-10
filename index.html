@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>pluginy</title>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="css\bootstrap.css">
+ <link rel="stylesheet" href="css\bootstrap.min.css">
+  <link rel="stylesheet" href="css\bootstrap-grid.css">
+<link rel="stylesheet" href="css\bootstrap-rebot.css">
+<link rel="stylesheet" href="css\bootstrap.min.css">
+<link href="nanogallery2/dist/css/nanogallery2.woff.min.css" rel="stylesheet" type="text/css">
+<link href="nanogallery2/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="stylecss.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js\jquery-3.5.1.min.js">
+</script>
+<script src="js\bootstrap.min.js">
+</script>
+  </head>
+  <body>
+
+<header>
+<div id="Link" >
+ 
+
+    <button type="button" class="btn btn-outline-secondary" style="border:none;"><a class="navbar-brand" style="font-size:35px;   color:white;height:50px; width:250px;  padding-left:inherit; "   href="index.html">Strona Główna</a></button>
+ 
+      
+</div>
+
+</header>
+<aside>
+
+<script type="text/javascript">
+
+     var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("Tekst1").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "plugin.txt", true);
+  xhttp.send();
+ 
+
+
+</script>
+
+    <div id="art">
+<div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+  <div class="card-header">wPaint i nannoGallery</div>
+  <div class="card-body">
+   
+    <p class="card-text"><div id="Tekst1"></div> </p>
+  </div>
+</div>
+</div> 
+<p style="color:white;">A</p>
+</aside>
+
+<div id="BodyStrony">
+<div id="titles">
+
+ <h1> <img src="javascript.png" style="border: 0" width="256" height="256" alt=""> jQuery</h1>
+
+</div>
+<nav > 
+<div class="container">
+  <div class="row">
+<div class="col-sm-3">
+<button type="button" class="btn btn-outline-secondary" onclick="loadDoc()">wPaint Plugin</button>
+<script type="text/javascript">
+function loadDoc() {
+$("#text").hide();
+$("#art").hide();
+$( "#info" ).hide();
+$("#pdf").hide();
+$("#galeria").hide();
+$( "#srodek" ).show();
+$( "article" ).show();
+$( "#srodek" ).load( "paint.html " );
+$( "article" ).load( "article.html " );
+};
+</script>
+
+
+
+</div>
+<div class="col-sm-3">
+
+<button type="button" class="btn btn-outline-secondary" onclick="galeria()">Galeria</button>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="nanogallery2/dist/jquery.nanogallery2.js"></script>
+
+<script type="text/javascript">
+function galeria() {
+$("#text").hide();
+$("#pdf").hide();
+$("#art").show();
+$("#galeria").show();
+$( "#srodek" ).hide();
+$( "article" ).hide();
+$( "#info" ).hide();
+
+$("#galeria").load("nannoGallery.html ");
+
+};
+</script>
+
+</div>
+<div class="col-sm-3">
+<button type="button" class="btn btn-outline-secondary" onclick="pdf()">Projekt Strony Pdf</button>
+<script type="text/javascript">
+function pdf() {
+$( "#info" ).hide();
+$("#art").hide();
+$("#pdf").show();
+$("#galeria").hide();
+$("#text").hide();
+$("#srodek").hide();  
+$( "article" ).hide();
+
+}
+</script>
+
+
+</div>
+<div class="col-sm-3">
+<button type="button" class="btn btn-outline-secondary" onclick="ajax()">Informacje o Ajaxie</button>
+<script type="text/javascript">
+function ajax() {
+$("#text").hide();
+$("#pdf").hide();
+$("#art").hide();
+$( "#srodek" ).hide();
+$( "article" ).hide();
+$( "galeria" ).hide();
+$( "#info" ).show();
+$("#info").load("ajax.html");
+};
+</script>
+</div>
+</div>
+</div>
+</nav>
+<main>
+<div id="text">
+<script type="text/javascript">
+$("#art").hide();
+$( "#text" ).load( "stronaGlowna.html" );
+</script>
+</div>
+<div id="srodek">
+</div>
+<div id="pdf" style="display: none;">
+<iframe src="PDF.pdf" style="width:100%;height:700px;"></iframe>
+</div>
+<div id="galeria">
+</div>
+<div id="info" style="text-align: justify;">
+</div>
+</main>
+</div>
+<article>
+
+
+</article>
+
+
+
+  </body>
+</html>

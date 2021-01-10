@@ -1,0 +1,90 @@
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="./lib/jquery.1.10.2.min.js"></script>
+
+  
+
+    <div class="content-box">
+      <!-- jQuery UI -->
+      <script type="text/javascript" src="./lib/jquery.ui.core.1.10.3.min.js"></script>
+      <script type="text/javascript" src="./lib/jquery.ui.widget.1.10.3.min.js"></script>
+      <script type="text/javascript" src="./lib/jquery.ui.mouse.1.10.3.min.js"></script>
+      <script type="text/javascript" src="./lib/jquery.ui.draggable.1.10.3.min.js"></script>
+      
+      <!-- wColorPicker -->
+      <link rel="Stylesheet" type="text/css" href="./lib/wColorPicker.min.css" />
+      <script type="text/javascript" src="./lib/wColorPicker.min.js"></script>
+
+      <!-- wPaint -->
+      <link rel="Stylesheet" type="text/css" href="./wPaint.min.css" />
+      <script type="text/javascript" src="./wPaint.min.js"></script>
+      <script type="text/javascript" src="./plugins/main/wPaint.menu.main.min.js"></script>
+      <script type="text/javascript" src="./plugins/text/wPaint.menu.text.min.js"></script>
+      <script type="text/javascript" src="./plugins/shapes/wPaint.menu.main.shapes.min.js"></script>
+      <script type="text/javascript" src="./plugins/file/wPaint.menu.main.file.min.js"></script>
+
+      <div id="wPaint" style="position:relative; width:300px; height:100px; background-color:#7a7a7a; margin:70px auto 20px auto;"></div>
+
+      <center style="margin-bottom: 50px;">
+        <input type="button" value="toggle menu" onclick="console.log($('#wPaint').wPaint('menuOrientation')); $('#wPaint').wPaint('menuOrientation', $('#wPaint').wPaint('menuOrientation') === 'vertical' ? 'horizontal' : 'vertical');"/>
+      </center>
+
+      <center id="wPaint-img"></center>
+
+      <script type="text/javascript">
+        var images = [
+          '/test/uploads/wPaint.png',
+        ];
+
+        function saveImg(image) {
+          var _this = this;
+
+          $.ajax({
+            type: 'POST',
+            url: '/test/upload.php',
+            data: {image: image},
+            success: function (resp) {
+
+          
+              _this._displayStatus('Image saved successfully');
+
+           
+              resp = $.parseJSON(resp);
+
+         
+              images.push(resp.img);
+
+              $('#wPaint-img').attr('src', image);
+            }
+          });
+        }
+
+        function loadImgBg () {
+
+      
+          this._showFileModal('bg', images);
+        }
+
+        function loadImgFg () {
+
+         
+          this._showFileModal('fg', images);
+        }
+
+        
+        $('#wPaint').wPaint({
+          menuOffsetLeft: -35,
+          menuOffsetTop: -50,
+          saveImg: saveImg,
+          loadImgBg: loadImgBg,
+          loadImgFg: loadImgFg
+        });
+      </script>
+    </div>
+
+

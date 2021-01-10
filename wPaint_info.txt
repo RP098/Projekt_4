@@ -1,0 +1,2 @@
+wPaint prosty darmowy plugin jQuery który w prosty sposób umożliwa rysowanie na stronie internetowej za pomocą prostych lecz ciekawych narzędzi.  
+Mała wtyczka umożliwiająca rysowanie przy użyciu podstawowych narzędzi. Istnieje również możliwość zapisywania i wczytywania grafik. Oparta jest o elementy canvas HTML5 i do poprawnego działania wymaga przeglądarki, która je obsługuje.
